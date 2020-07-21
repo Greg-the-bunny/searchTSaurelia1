@@ -1,0 +1,31 @@
+<!-- <import from="./todo"></import> -->
+
+
+<template>
+  <h1>This is my primary landing page</h1>
+  <h1>${message}</h1>
+  <ul>
+    <li>
+        <input type="checkbox" checked.bind="todo.done">
+        <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">${todo.description}</span>
+    </li>
+  </ul>
+
+
+  <input id = "name" type = "text" value.bind = "myData" /><button click.delegate = "updateContent()">Update Content</button><br>
+
+  <h3>${myData}</h3>
+
+  <!-- <say-hello to="Greg"></say-hello> -->
+
+
+  <!-- <ul>
+    <li><a route-href="home"></a>Home</li>
+    <li><a route-href="about"></a>About</li>
+  </ul> -->
+
+
+  <!-- <router-view></router-view> -->
+
+
+</template>

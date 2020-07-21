@@ -1,0 +1,24 @@
+<header>
+    <h1>Search EDA</h1>
+</header>
+<form class="search-form">
+<input type="text" value="" placeholder="Search EDA..." class="search-input" />
+<button class="search-button" click.delegate="searchClicked()">Search</button>
+</form>
+<section id="search-results">
+    <ul>
+        <li repeat.for="x of results">
+            <article>
+                <div class="card">
+                    <h3>${x.title}</h3>
+                    <div class="card-body" repeat.for="xz of x.highlight.content">
+                        <p class="card-text" innerhtml.bind="xz"></h3>
+                    </div>
+                    <mwc-dialog heading="Search Results" open="boolOpen" show.bind="boolOpen" ref="dialogRef">
+                        <mwc-button slot="primaryAction" dialogAction="close" raised>Document</mwc-button>
+                    </mwc-dialog>
+                </div>
+            </article>
+        </li>
+    </ul>
+</section>
